@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cousine", monospace;
+  display: flex;
+  flex-direction: column;
+  background-color: #37625e;
+}
+
+.container {
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 370px;
+  margin-top: 40px;
+  padding: 10px 10px 0 10px;
+  background-color: transparent;
+  border: 1.5px solid #233d41;
+  font-size: 1rem;
+  box-shadow: #233d41c8 7px 7px 0px;
+}
+
+.header {
+  padding: 30px 40px;
+  color: #233d41;
+  text-align: center;
+}
+
+/* clear floats after header */
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  font-family: "Cousine", monospace;
+  border: solid #233d41;
+  border-width: 1.5px 0 1.5px 1.5px;
+  background-color: #436c679f;
+  color: #233d41;
+}
+
+input::placeholder {
+  color: #adcdb639;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: transparent;
+  color: #233d41;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 0;
+  border: 1.5px solid #233d41;
+}
+
+.addBtn:hover {
+  background-color: #436c67;
+}
+
+ul {
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: transparent;
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+  color: #233d41;
+  /* makes list items unselectable */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+ul li:hover {
+  color: #adcdb6;
+}
+
+ul li.checked {
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #233d41;
+  color: white;
+}
+
+.credits p {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  color: #233d4190;
+}
+
+.credits a {
+  color: #233d4190;
+  text-underline-offset: 2px;
+  text-decoration-color: #233d4122;
+}
